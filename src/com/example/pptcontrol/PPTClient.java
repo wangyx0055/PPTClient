@@ -6,14 +6,18 @@ import java.io.ObjectOutputStream;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.widget.Button;
+import android.widget.RelativeLayout;
  
 public class PPTClient extends Activity {
     private Button start;
@@ -27,6 +31,7 @@ public class PPTClient extends Activity {
     private final static int LEFT = 2;
     private final static int SHIFTF5 = 0;
     private final static int ESC = 3;
+    RelativeLayout mouse ;
      
     /** Called when the activity is first created. */
     @Override
@@ -50,6 +55,18 @@ public class PPTClient extends Activity {
         escape = (Button)this.findViewById(R.id.escape);
         forward = (Button)this.findViewById(R.id.forward);
         back = (Button)this.findViewById(R.id.back);
+        mouse = (RelativeLayout)this.findViewById(R.id.mouse);
+        
+        mouse.setOnTouchListener(new OnTouchListener(){
+
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				// TODO Auto-generated method stub
+				event.getAction();
+				return false;
+			}
+        	
+        });
          
         start.setOnClickListener(new Button.OnClickListener(){
  

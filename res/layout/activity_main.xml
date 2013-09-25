@@ -44,4 +44,13 @@
         android:layout_toRightOf="@+id/escape"
         android:text="下一张" />
 
+    <RelativeLayout
+        android:id="@+id/mouse"
+        android:layout_width="50dp"
+        android:layout_height="180dp"
+        android:layout_alignParentLeft="true"
+        android:background="#8C8C8C" >
+
+    </RelativeLayout>
+
 </RelativeLayout>

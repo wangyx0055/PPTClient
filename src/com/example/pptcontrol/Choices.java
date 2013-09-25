@@ -18,6 +18,5 @@ public class Choices implements Serializable{
  
     public void setKey(int key) {
         this.key = key;
-    }
-     
+    }     
 }
